@@ -16,14 +16,14 @@
 
 package com.example.inventory
 
+import InventoryDatabase
 import android.app.Application
 import com.example.inventory.data.AppContainer
 import com.example.inventory.data.AppDataContainer
-import com.example.inventory.data.ItemRoomDatabase
 
 class InventoryApplication : Application() {
 
-    val database: ItemRoomDatabase by lazy { ItemRoomDatabase.getDatabase(this) }
+    val database: InventoryDatabase by lazy { InventoryDatabase.getDatabase(this) }
     /**
      * AppContainer instance used by the rest of classes to obtain dependencies
      */
